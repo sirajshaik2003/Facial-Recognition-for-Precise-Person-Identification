@@ -1,1 +1,4 @@
 # Facial-Recognition-for-Precise-Person-Identification
+
+Human face is the significant characteristic to identify a person. Everyone has their own unique face even for twins. Thus, a face recognition and identification are required to distinguish each other. This project focuses on face recognition using the LBPH algorithm, employing distance metrics for accurate identification. Known for its resilience to lighting changes and efficiency, LBPH is implemented through texture analysis and pattern recognition. The system, leveraging OpenCV, offers applications in security, user authentication, and interactive systems. Additionally, a proposed method explores deep learning with a dataset, training on LBPH, and using OpenCV for face recognition, aiming to create a robust system adaptable to diverse conditions for security and personalized user experiences.
+
