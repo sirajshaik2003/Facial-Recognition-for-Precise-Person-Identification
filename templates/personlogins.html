@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from themewagon.github.io/pizza/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 07:27:21 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <title>Face Recognition</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/animate.css" />
+
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/static/css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="/static/css/aos.css" />
+
+    <link rel="stylesheet" href="/static/css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="/static/css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="/static/css/flaticon.css" />
+    <link rel="stylesheet" href="/static/css/icomoon.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <script type="text/javascript">
+		function tableToCSV() {
+
+			// Variable to store the final csv data
+			var csv_data = [];
+
+			// Get each row data
+			var rows = document.getElementsByTagName('tr');
+			for (var i = 0; i < rows.length; i++) {
+
+				// Get each column data
+				var cols = rows[i].querySelectorAll('td,th');
+
+				// Stores each csv row data
+				var csvrow = [];
+				for (var j = 0; j < cols.length; j++) {
+
+					// Get the text data of each cell
+					// of a row and push it to csvrow
+					csvrow.push(cols[j].innerHTML);
+				}
+
+				// Combine each column value with comma
+				csv_data.push(csvrow.join(","));
+			}
+
+			// Combine each row data with new line character
+			csv_data = csv_data.join('\n');
+
+			// Call this function to download csv file
+			downloadCSVFile(csv_data);
+
+		}
+
+		function downloadCSVFile(csv_data) {
+
+			// Create CSV file object and feed
+			// our csv_data into it
+			CSVFile = new Blob([csv_data], {
+				type: "text/csv"
+			});
+
+			// Create to temporary link to initiate
+			// download process
+			var temp_link = document.createElement('a');
+
+			// Download csv file
+			temp_link.download = "face.csv";
+			var url = window.URL.createObjectURL(CSVFile);
+			temp_link.href = url;
+
+			// This link should not be displayed
+			temp_link.style.display = "none";
+			document.body.appendChild(temp_link);
+
+			// Automatically click the link to
+			// trigger download
+			temp_link.click();
+			document.body.removeChild(temp_link);
+		}
+	</script>
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-face-smile"></i>Face<br><small>Recognition</small></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item "><a href="/addperson" class="nav-link">Add Person</a></li>
+                <li class="nav-item "><a href="/viewperson" class="nav-link">View Person's</a></li>
+                <li class="nav-item active"><a href="personlogins" class="nav-link">Person Logins</a></li>
+                <li class="nav-item"><a href="/admin" class="nav-link">Logout</a></li>
+              </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+    <section class="ftco-section contact-section">
+      <div class="container mt-5">
+        <div class="row block-9">
+          <div class="col-md-4 contact-info ftco-animate" style="width:50vw;">
+            <div class="card-body rounded-bottom  p-5" style="width:50vw; background-color: #fac564;">
+              <div class="table table-responsive" style="width:50vw;">
+                <button type="button" class="btn btn-info" onclick="tableToCSV()">
+                    download CSV
+                </button>
+            <table class="table table-striped"><b>
+           
+                <th style="color:black">Name</th>
+                <th style="color:black">Emp_ID</th>
+                <th style="color:black">Date</th>
+                <th style="color:black">Month</th>
+                <th style="color:black">In Time</th>
+                <th style="color:black">Out Time</th>
+                <th style="color:black">Overall Time</th>
+
+    {% for id,empid,name,date,month,intime,outtime,overalltime,address,phone,image in data %}
+    <tr>
+        <td >{{name}}</td>
+        <td >{{empid}}</td>
+        <td >{{date}}</td>
+        <td >{{month}}</td>
+        <td >{{intime}}</td>
+        <td >{{outtime}}</td>
+        <td >{{overalltime}}</td>
+   
+    </tr>
+    
+    {% endfor %}
+
+
+            </b> </table>
+            </div></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="map"></div>
+
+  
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
+    </div>
+
+
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.easing.1.3.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/aos.js"></script>
+    <script src="/static/js/jquery.animateNumber.min.js"></script>
+    <script src="/static/js/bootstrap-datepicker.js"></script>
+    <script src="/static/js/jquery.timepicker.min.js"></script>
+    <script src="/static/js/scrollax.min.js"></script>
+    <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+    <script src="/static/js/google-map.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+
+  <!-- Mirrored from themewagon.github.io/pizza/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 07:27:21 GMT -->
+</html>

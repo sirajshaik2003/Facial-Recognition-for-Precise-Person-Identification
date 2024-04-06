@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from themewagon.github.io/pizza/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 07:26:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Face Recognition</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/static/css/aos.css">
+
+    <link rel="stylesheet" href="/static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/static/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="/static/css/flaticon.css">
+    <link rel="stylesheet" href="/static/css/icomoon.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+		      <a class="navbar-brand" href="#"><i class="fa-solid fa-face-smile"></i>Face<br><small>Recognition</small></a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="oi oi-menu"></span> Menu
+		      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="/admin" class="nav-link">Admin</a></li>
+	          <li class="nav-item"><a href="/recognition" class="nav-link">Face Recognition</a></li>
+	         
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel img" style="background-image: url(/static/images/2.jpg);">
+      <div class="slider-item">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-6 col-sm-12 ftco-animate">
+            	<span class="subheading">PROJECT</span>
+              <h1 class="mb-4">Problem Statement</h1>
+              <p class="mb-4 mb-md-5">
+                Face recognition technology faces critical challenges that hinder its effectiveness and broader adoption, especially in environments characterized by dynamic lighting, diverse facial orientations, and varying expressions. Traditional algorithms often fall short in accurately identifying individuals under such fluctuating conditions, leading to potential security breaches and decreased system reliability. The primary issue lies in the need for an algorithm that maintains high recognition accuracy while being resilient to environmental and intrinsic facial variations. Furthermore, the computational efficiency of face recognition systems is paramount, particularly for real-time applications and devices with limited processing capabilities. The challenge extends to developing a solution that is not only accurate and robust under diverse conditions but also computationally efficient and accessible for integration into various platforms, ranging from high-security systems to everyday consumer electronics. 
+
+                <!-- <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p> -->
+            </div>
+            <div class="col-md-6 ftco-animate">
+            	<img src="/static/images/1.jpg" style="border-radius: 80%;" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+            {% with messages = get_flashed_messages() %} {% if messages %}
+            <ul class="flashes">
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
+            <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
+            	<span class="subheading">PROJECT</span>
+              <h1 class="mb-4">Objective</h1>
+              <p class="mb-4 mb-md-5">
+                The primary objective of this project is to develop a face recognition system based on the Local Binary Patterns Histograms (LBPH) algorithm that excels in accuracy, efficiency, and adaptability. The system aims to address the prevalent challenges in face recognition by offering high performance under variable lighting, facial expressions, and poses. Specific goals include: 1) Implementing the LBPH algorithm to transform facial images into a robust feature representation that captures essential texture details, 2) Ensuring the system's ability to segment and analyze images effectively to accommodate real-world variability, 3) Achieving high recognition accuracy through reliable comparison metrics, and 4) Ensuring computational efficiency to enable real-time processing and applicability in devices with varying capabilities. Ultimately, the project seeks to advance face recognition technology, making it more accessible, reliable, and user-friendly across different applications and industries.
+
+
+                <!-- <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p> -->
+            </div>
+            <div class="col-md-6 ftco-animate">
+            	<img src="/static/images/3.jpg" style="border-radius: 80%;" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(/static/images/2.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+            {% with messages = get_flashed_messages() %} {% if messages %}
+            <ul class="flashes">
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<!-- <span class="subheading">Welcome</span> -->
+              <h1 class="mb-4">FACE RECOGNITION USING COMPUTER VISION</h1>
+              <p class="mb-4 mb-md-5">
+                The Local Binary Patterns Histograms (LBPH) algorithm represents a significant advancement in the field of face recognition, offering a robust and efficient method for identifying individuals based on facial features. This algorithm stands out due to its simplicity and effectiveness in dealing with variations in lighting and facial expressions, making it highly suitable for real-world applications. The LBPH method operates by first transforming facial images into an intermediate representation using Local Binary Patterns (LBP), which effectively captures the texture details of the face. The image is then divided into small regions, and a histogram of LBP values is computed for each region to encapsulate local texture information. These histograms are concatenated to form a global feature vector that uniquely represents the facial image.
+                <br><b>INDEX TERMS:</b> Convolutional neural network, Face recognition, OpenCV.
+				</p>
+              <!-- <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="ftco-intro">
+    	<div class="container-wrap">
+    		<div class="wrap d-md-flex">
+	    		<div class="info">
+	    			<div class="row no-gutters">
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-phone"></span></div>
+	    					<div class="text">
+	    						<h3>000 (123) 456 7890</h3>
+	    						<p>A small river named Duden flows</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-my_location"></span></div>
+	    					<div class="text">
+	    						<h3>198 West 21th Street</h3>
+	    						<p>Suite 721 New York NY 10016</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-clock-o"></span></div>
+	    					<div class="text">
+	    						<h3>Open Monday-Friday</h3>
+	    						<p>8:00am - 9:00pm</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="social d-md-flex pl-md-5 p-4 align-items-center">
+	    			<ul class="social-icon">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+	    		</div>
+    		</div>
+    	</div>
+    </section> -->
+
+
+
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/jquery.easing.1.3.js"></script>
+  <script src="/static/js/jquery.waypoints.min.js"></script>
+  <script src="/static/js/jquery.stellar.min.js"></script>
+  <script src="/static/js/owl.carousel.min.js"></script>
+  <script src="/static/js/jquery.magnific-popup.min.js"></script>
+  <script src="/static/js/aos.js"></script>
+  <script src="/static/js/jquery.animateNumber.min.js"></script>
+  <script src="/static/js/bootstrap-datepicker.js"></script>
+  <script src="/static/js/jquery.timepicker.min.js"></script>
+  <script src="/static/js/scrollax.min.js"></script>
+  <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+  <script src="/static/js/google-map.js"></script>
+  <script src="/static/js/main.js"></script>
+    
+  </body>
+
+<!-- Mirrored from themewagon.github.io/pizza/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 07:27:12 GMT -->
+</html>
